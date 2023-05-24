@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build the nginx docker image') {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerHubCreds') {
